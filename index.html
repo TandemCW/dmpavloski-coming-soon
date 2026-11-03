@@ -10,13 +10,15 @@
       --bg: #f6f3ee;
       --text: #2b2825;
       --muted: #7a736b;
-      --accent: #2b2825;
+      --tan: #d9d4cb;
+      --accent: #e3a25b;
+      --accent-dark: #c9792f;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { height: 100%; }
     body {
       /* Fallback color shows if the image ever fails to load */
-      background-color: #d9d4cb;
+      background-color: var(--tan);
       background-image: url("background.jpg");
       background-size: cover;
       background-position: center;
@@ -43,7 +45,7 @@
     }
     .rule {
       width: 48px;
-      height: 1px;
+      height: 2px;
       background: var(--accent);
       margin: 0 auto 20px;
     }
@@ -64,8 +66,12 @@
       text-decoration: none;
       border-bottom: 1px solid var(--text);
       padding-bottom: 2px;
+      transition: color 0.2s ease, border-color 0.2s ease;
     }
-    a:hover { color: var(--muted); border-color: var(--muted); }
+    a:hover, a:focus-visible {
+      color: var(--accent-dark);
+      border-color: var(--accent-dark);
+    }
   </style>
 </head>
 <body>
